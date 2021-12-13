@@ -1,6 +1,7 @@
 # Path to your oh-my-bash installation.
-export OSH=/home/fraser/.oh-my-bash
+export OSH=~/.oh-my-bash/
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="font"
@@ -32,7 +33,8 @@ plugins=(
 )
 
 source $OSH/oh-my-bash.sh
-
+# set source as bash_profile so mac specific path lines can be added here
+source ~/.bash_profile
 
 #################
 # custom config #
@@ -50,7 +52,7 @@ export VISUAL="nvim"
 ###########
 
 # Auto "cd" when entering just a path
-shopt -s autocd 2> /dev/null
+#shopt -s autocd 2> /dev/null
 
 # Line wrap on window resize
 shopt -s checkwinsize 2> /dev/null
@@ -99,7 +101,7 @@ else # OS X `ls`
 fi
 
 alias grep='grep --color=auto -n -i'
-
+# clears scrollback history also
 alias clear="clear && printf '\e[3J'";
 
 alias df="df -h"
