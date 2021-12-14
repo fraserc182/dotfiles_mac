@@ -106,6 +106,7 @@ alias clear="clear && printf '\e[3J'";
 
 alias df="df -h"
 alias du="du -h"
+alias vim="nvim"
 
 #############
 # Functions #
