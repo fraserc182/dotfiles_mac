@@ -40,6 +40,9 @@ source ~/.bash_profile
 # custom config #
 #################
 
+# add /usr/local/bin to path, required for aws cli
+export PATH=/usr/local/bin:$PATH
+
 # set default editor as nvim
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -59,9 +62,6 @@ shopt -s checkwinsize 2> /dev/null
 
 # Case-insensitive tab completetion
 bind 'set completion-ignore-case on'
-
-# When displaying tab completion options, show just the remaining characters
-bind 'set completion-prefix-display-length 2'
 
 # Show tab completion options on the first press of TAB
 #bind 'set show-all-if-ambiguous on'
@@ -107,6 +107,7 @@ alias clear="clear && printf '\e[3J'";
 alias df="df -h"
 alias du="du -h"
 
+alias vim="nvim"
 #############
 # Functions #
 #############
