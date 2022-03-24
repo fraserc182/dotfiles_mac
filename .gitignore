@@ -1,2 +1,3 @@
 nvim/backups/*
 nvim/backups/init.vim~
+.DS_Store
